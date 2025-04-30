@@ -1,11 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8c8f9;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .calculator {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 260px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 16px;
+    }
+
+    .display {
+      background-color: #ebf3f3;
+      color: #76797a;
+      font-size: 2rem;
+      padding: 10px;
+      text-align: right;
+      border-radius: 48px;
+      min-height: 30px;
+      box-shadow: inset;
+      box-shadow: 5px 5px 5px #dcdcdc;
+
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      background-color: #eceff4;
+      color: #3e4853;
+      cursor: pointer;
+      box-shadow: 5px 5px 5px #dcdcdc;
+    }
+    .del{
+      padding: 20px;
+      font-size: 12rem;
+      border: none;
+      border-radius: 60px;
+      background-color: #eceff4;
+      color: #3e4853;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #777;
+    }
+
+    .buttons .equals {
+      grid-column: span 2;
+      background-color: #e2adcb;
+    }
+
+    .buttons .clear {
+      background-color: #eceff4;
+    }
+
+    .buttons .operator {
+      background-color: #eceff4;
+    }
+  </style>
 </head>
 <body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+        <button class="clear">c</button>
+        <button class="del">del</button>
+        <button class="operator">%</button>
+        <button class="operator">/</button>
+       
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">*</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">-</button>
+
+      
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">+</button>
+      <button class="operator">.</button>
+
+      <button>0</button>
     
+      <button class="equals">=</button>
+    </div>
+  </div>
 </body>
 </html>
